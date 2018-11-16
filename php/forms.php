@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>	
+<head>
 <style>
 	div {
 		margin-top: 20px;
@@ -32,7 +32,7 @@ function validateForm() {
 </head>
 <body>
 
-<?php 
+<?php
 // Generating a form by making use of a loop
 echo "<strong>DYNAMIC FORMS</strong> <br>";
 $arr = ["Lion", "Cat", "Dog", "Pig", "Elephant", "Tiger"];
