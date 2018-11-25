@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Peer Evaluation</title>
+	<style>
+		div {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	</style>
+
+<script>
+
+function validateForm() {
+    // write code to validate your forms
+		var x = document.forms["myForm"]["INST377"].value;
+		var y = document.forms["myForm"]["Time_start"].value;
+		var z = document.forms["myForm"]["Time_end"].value;
+		var b = document.forms["myForm"]["overall_grade"].value;
+		var Time_regex = /^\d{1,2}:\d{2}([ap]m)?$/;
+    if (x == "") {
+        alert("Participation field must be filled out");
+        return false;
+    } else if (y==""){
+    		alert("Need to input a start date");
+    		return false;
+				if (y!==Time_regex.test(Time_start)) {
+					alert("Need to input a correct date")
+					return false
+				}
+    } else if (z==""){
+				alert("Need to input a correct start date")
+				return false
+				if (z!==Time_regex.test(Time_end)){
+					alert("Need to input a correct end date")
+					return false
+				}
+		} else if (b==""){
+				alert("Need to input an overall grade")
+				return false
+				if (b!=="A"||"B"||"C"||"D"||"F"){
+					alert("Need to input a correct grade")
+					return false
+				}
+		}
+}
+
+</script>
+
+</head>
+<body>
+	<!-- Create Your Form Below -->
+	<form name="myForm" action="form_processor.php" onsubmit="return
+	validateForm()" method = "post">
+	<form>
+		Team Project Name: <input id = Project_Name type="text" name="INST377"><br>
+		Time Start: <input id = "Start_Time" type="time" name="Time_start"><br>
+		Time Stop: <input id = "End_Time" type="time" name="Time_end"><br>
+
+		Team Member Name: <input id = Team_Name type="text" name="First_last"><br>
+		Level of Participation:<br>
+		<input type="radio" name="participation" value=1> Above and Beyond<br>
+		<input type="radio" name="participation" value=2> Satisfactory<br>
+		<input type="radio" name="participation" value=3> Unsatisfactory<br>
+		<input type="radio" name="participation" value=4> Absent<br>
+
+		Team Member Name: <input id = Team_Name1 type="text" name="First_last1"><br>
+		Level of Participation:<br>
+		<input type="radio" name="participation1" value=1> Above and Beyond <br>
+		<input type="radio" name="participation1" value=2> Satisfactory<br>
+		<input type="radio" name="participation1" value=3> Unsatisfactory<br>
+		<input type="radio" name="participation1" value=4> Absent<br>
+
+		Team Member Name: <input id = Team_Name2 type="text" name="First_last2"><br>
+		Level of Participation:<br>
+		<input type="radio" name="participation2" value=1> Above and Beyond <br>
+		<input type="radio" name="participation2" value=2> Satisfactory<br>
+		<input type="radio" name="participation2" value=3> Unsatisfactory<br>
+		<input type="radio" name="participation2" value=4> Absent<br>
+
+		Team Member Name: <input id = Team_Name3 type="text" name="First_last3"><br>
+		Level of Participation:<br>
+		<input type="radio" name="participation3" value=1> Above and Beyond <br>
+		<input type="radio" name="participation3" value=2> Satisfactory<br>
+		<input type="radio" name="participation3" value=3> Unsatisfactory<br>
+		<input type="radio" name="participation3" value=4> Absent<br>
+
+		Team Member Name: <input id = Team_Name4 type="text" name="First_last4"><br>
+		Level of Participation:<br>
+		<input type="radio" name="participation4" value=1> Above and Beyond<br>
+		<input type="radio" name="participation4" value=2> Satisfactory<br>
+		<input type="radio" name="participation4" value=3> Unsatisfactory<br>
+		<input type="radio" name="participation4" value=4> Absent<br>
+
+		Notes on Presentation: <input id = Notes type="text" name="notes"><br>
+
+		Overall Team Grade: <input id = Grades name="overall_grade"><br>
+			<select name="overall_grade">
+  			<option value=1>A</option>
+  			<option value=2>B</option>
+  			<option value=3>C</option>
+  			<option value=4>D</option>
+				<option value=5>E</option>
+			</select><br>
+	<input type="submit"><br>
+
+
+	</form>
+
+
+
+</body>
+</html>
